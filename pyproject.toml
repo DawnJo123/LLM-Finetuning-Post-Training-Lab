@@ -1,0 +1,18 @@
+[project]
+name = "llm-finetuning"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "accelerate>=1.15.0",
+    "huggingface-hub>=2.4.0",
+    "safetensors>=0.8.0",
+    "torch==2.10.0",
+    "transformers>=4.51.0",
+]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu126" }
+
+[[tool.uv.index]]
+name = "pytorch-cu126"
+url = "https://download.pytorch.org/whl/cu126"
